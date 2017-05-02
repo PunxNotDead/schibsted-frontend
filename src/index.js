@@ -7,7 +7,7 @@ import { AppContainer } from 'react-hot-loader';
 import 'bootstrap-webpack!../bootstrap.config.js';
 import '!style-loader!css-loader!less-loader!./less/index.less';
 
-import Router from './components/Router';
+import Main from './components/Main';
 
 const render = (Component) => {
 	ReactDOM.render(
@@ -18,11 +18,11 @@ const render = (Component) => {
 	);
 };
 
-render(Router);
+render(Main);
 
 // Hot Module Replacement API
 if (module.hot) {
-	module.hot.accept('./components/Router', () => {
-		render(Router)
+	module.hot.accept('./components/Main', () => {
+		render(Main)
 	});
 }

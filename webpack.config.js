@@ -16,6 +16,8 @@ module.exports = {
 		// bundle the client for hot reloading
 		// only- means to only hot reload for successful updates
 
+		'babel-polyfill',
+
 		'./index.js'
 		// the entry point of our app
 	],
@@ -62,6 +64,23 @@ module.exports = {
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader?modules',],
 			},
+			// the file-loader emits files.
+			{
+				test: /\.(woff|woff2)$/,
+				loader: "url-loader?limit=10000&mimetype=application/font-woff&name=dist/fonts/[name].[ext]"
+			},
+			{
+				test: /\.ttf$/,
+				loader: "file-loader?limit=10000&mimetype=application/font-ttf&name=dist/fonts/[name].[ext]"
+			},
+			{
+				test: /\.eot$/,
+				loader: "file-loader?limit=10000&mimetype=application/font-eot$&name=dist/fonts/[name].[ext]"
+			},
+			{
+				test: /\.svg$/,
+				loader: "file-loader?limit=10000&mimetype=application/font-svg$&name=dist/fonts/[name].[ext]"
+			}
 		],
 	},
 
