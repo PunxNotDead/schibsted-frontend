@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import createSagaMiddleware from 'redux-saga';
 
-import List from './List';
+import PlacesList from './PlacesList';
 import reducers from '../reducers';
 import saga from '../sagas';
 import initialStore from '../store/initialStore';
@@ -21,7 +21,7 @@ sagaMiddleware.run(saga);
 const Main = () => (
 	<Provider store={store}>
 		<Router>
-			<Route exact path="/" component={List} />
+			<Route exact path="/" component={PlacesList} />
 		</Router>
 	</Provider>
 );
