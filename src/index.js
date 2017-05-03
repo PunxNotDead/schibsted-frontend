@@ -8,7 +8,7 @@ import { AppContainer } from 'react-hot-loader';
 import 'bootstrap-webpack!../bootstrap.config.js';
 import '!style-loader!css-loader!less-loader!./less/index.less';
 
-import Main from './components/Main';
+import RootComponent from './RootComponent';
 
 const render = (Component) => {
 	ReactDOM.render(
@@ -19,11 +19,11 @@ const render = (Component) => {
 	);
 };
 
-render(Main);
+render(RootComponent);
 
 // Hot Module Replacement API
 if (module.hot) {
-	module.hot.accept('./components/Main', () => {
-		render(Main)
+	module.hot.accept('./RootComponent', () => {
+		render(RootComponent)
 	});
 }

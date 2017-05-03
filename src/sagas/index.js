@@ -19,7 +19,7 @@ function* fetchPlacesList(action) {
 }
 
 function* placesSaga() {
-  yield takeLatest(PLACES_FETCH_REQUESTED, fetchPlacesList);
+	yield takeLatest(PLACES_FETCH_REQUESTED, fetchPlacesList);
 }
 
 export default placesSaga;

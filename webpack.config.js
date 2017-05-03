@@ -34,6 +34,10 @@ module.exports = {
 
 	devtool: 'inline-source-map',
 
+	resolve: {
+		extensions: ['.js', '.jsx']
+	},
+
 	devServer: {
 		hot: true,
 		// enable HMR on the server
