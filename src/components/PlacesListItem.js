@@ -5,7 +5,7 @@ const PlacesListItem = (props) => (
 	<div className="row">
 		<section className="col-xs-12 place-item">
 			<div className="col-xs-12 col-sm-6 col-lg-4 col-lg-offset-1 text-center">
-				{props.item.photo ? <img src={`/api/photos/${props.item.photo}`} style={{width: '300px'}} alt={props.item.name} /> : null}
+				{props.item.photo ? <img className="place-item__photo" src={`/api/photos/${props.item.photo}`} alt={props.item.name} /> : null}
 			</div>
 			<div className="col-xs-12 col-sm-6 col-lg-6">
 				<h3>{props.item.name}</h3>

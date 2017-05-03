@@ -37,8 +37,8 @@ class List extends Component {
 						<h2>Bars list</h2>
 
 						<div className="input-group">
-							<span className="input-group-addon" id="basic-addon1">Filter</span>
-							<input type="text" className="form-control" placeholder="Some words for filtering..." onChange={this.queryChanged} aria-describedby="basic-addon1" />
+							<span className="input-group-addon" id="addon-filter">Filter</span>
+							<input type="text" className="form-control" placeholder="Some words for filtering..." onChange={this.queryChanged} aria-describedby="addon-filter" />
 						</div>
 					</div>
 				</div>

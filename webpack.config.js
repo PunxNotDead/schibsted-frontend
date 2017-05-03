@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	context: resolve(__dirname, 'src'),
@@ -67,24 +68,28 @@ module.exports = {
 			// the file-loader emits files.
 			{
 				test: /\.(woff|woff2)$/,
-				loader: "url-loader?limit=10000&mimetype=application/font-woff&name=dist/fonts/[name].[ext]"
+				loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"
 			},
 			{
 				test: /\.ttf$/,
-				loader: "file-loader?limit=10000&mimetype=application/font-ttf&name=dist/fonts/[name].[ext]"
+				loader: "file-loader?limit=10000&mimetype=application/font-ttf&name=fonts/[name].[ext]"
 			},
 			{
 				test: /\.eot$/,
-				loader: "file-loader?limit=10000&mimetype=application/font-eot$&name=dist/fonts/[name].[ext]"
+				loader: "file-loader?limit=10000&mimetype=application/font-eot$&name=fonts/[name].[ext]"
 			},
 			{
 				test: /\.svg$/,
-				loader: "file-loader?limit=10000&mimetype=application/font-svg$&name=dist/fonts/[name].[ext]"
+				loader: "file-loader?limit=10000&mimetype=application/font-svg$&name=fonts/[name].[ext]"
 			}
 		],
 	},
 
 	plugins: [
+		new CopyWebpackPlugin([
+			{ from: '../asserts' }
+		]),
+
 		new webpack.HotModuleReplacementPlugin(),
 		// enable HMR globally
 

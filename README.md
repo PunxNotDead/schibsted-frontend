@@ -1,12 +1,12 @@
 # Frontend part of Schibsted test task
 
-# Installation
+# Installation & running
 
 `npm install`
 
 `npm start`
 
-Navigate to http://localhost:8080/ in browser.
+Navigate to [http://localhost:8080](http://localhost:8080) in browser.
 
 # Description
 
@@ -20,3 +20,8 @@ Every request to /api proxied to localhost:3001
 * LESS
 * Bootstrap as CSS framework
 * Webpack
+
+# What is omitted
+
+* Config for production mode for webpack (uglify and so on)
+* Not fixed warning `Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.` because of little bit outdated external lib for ratings

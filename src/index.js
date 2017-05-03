@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { AppContainer } from 'react-hot-loader';
 // AppContainer is a necessary wrapper component for HMR
+import { AppContainer } from 'react-hot-loader';
 
+// Injecting Bootstrap into application
 import 'bootstrap-webpack!../bootstrap.config.js';
 import '!style-loader!css-loader!less-loader!./less/index.less';
 

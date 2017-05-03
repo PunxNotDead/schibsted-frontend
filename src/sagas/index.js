@@ -7,6 +7,7 @@ import Api from '../services/api';
 
 function* fetchPlacesList(action) {
 	try {
+		// Debounce requests, waiting until end of typing
 		yield call(delay, 500);
 
 		// Api.getPlacesList should return Promise
