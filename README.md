@@ -8,6 +8,8 @@
 
 Navigate to [http://localhost:8080](http://localhost:8080) in browser.
 
+By default webpack building bundle.json into memory. If you wand files, run `npm run build`
+
 # Description
 
 This is front end part of test task, backend part is situated here: [schibsted-backend](https://github.com/PunxNotDead/schibsted-backend)
