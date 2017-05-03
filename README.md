@@ -8,7 +8,7 @@
 
 Navigate to [http://localhost:8080](http://localhost:8080) in browser.
 
-By default webpack building bundle.json into memory. If you wand files, run `npm run build`
+By default webpack building bundle.json into memory. If you want files, run `npm run build`
 
 # Description
 
